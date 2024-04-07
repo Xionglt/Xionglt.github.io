@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Western tea set</title>
+    <link href="/dist/css/strip.css" rel="stylesheet">
+    <!-- <style>
+        html,body,div,ul,li {
+            padding: 0;
+            margin: 0;
+        }
+        .contaner {
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            align-items: center; /*item内容垂直居中*/
+        }
+        .item {
+            font-size: 40px;
+            width: calc((100% - 40px)/3);
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .item:nth-child(3n - 1) {
+            padding:0 20px;
+        }
+    </style> -->
+    <style>
+        .box {
+              margin: 10px;
+              column-count: 3;
+              column-gap: 10px;
+          }
+          .item {
+              margin-bottom: 10px;
+          }
+          .item img{
+              width: 100%;
+              height:100%;
+          }
+      </style>
+</head>
+<body background="/photo/bc3.jpg"
+ 
+style="background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%; "
+>
+  
+ 
+<div id="container" class="box"></div>
+ 
+<script src="/loadImg_west.js"></script>
+<script >
+getPhotos("./photos/summary/2_west.xml","west_bot");
+</script>
+<script src="/JQ/js/jquery-1.11.0.min.js"></script>
+<script src="/JQ/dist/js/strip.pkgd.min.js"></script> 
+</body>
+</html>
