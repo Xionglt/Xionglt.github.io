@@ -49,6 +49,9 @@ function getPhotos(xmlFile,albumName) {
     //   </a>
         var ele_img = document.createElement("img");
         var ele_a = document.createElement("a");
+        var ele_div = document.createElement("div");
+        var ele_span = document.createElement("span");
+        var ele_p = document.createElement("p");
  
         ele_img.setAttribute("src",src);
         ele_img.setAttribute("alt",alt);
@@ -59,9 +62,18 @@ function getPhotos(xmlFile,albumName) {
         ele_a.setAttribute('data-strip-caption',photoName.split(".")[0]);
         ele_a.setAttribute('href',src);
         ele_a.setAttribute('data-strip-group',"gallery-name");
- 
+
+        ele_div.setAttribute("class","namebox");
+        // ele_span.innerText = photoName.split(".")[0];
+        // ele_p.innerText = "US$ 128.00";
+        // ele_div.setAttribute('href',src);
+        // ele_div.setAttribute('data-strip-group',"gallery-name");
         ele_a.append(ele_img);
-        container.append(ele_a);
+        ele_div.append(ele_a);
+        ele_div.append(ele_span);
+        ele_div.append(ele_p);
+
+        container.append(ele_div);
  
     }
     

@@ -6,12 +6,13 @@
  
 #define ADDR1 "photos//tea_bot//*.jpg" 
 #define ADDR2 "photos//west_bot//*.jpg"
-
+#define ADDR3 "photos//shop//*.jpg"
+#define ADDR4 "photos//story//*.jpg"
  
 #define ADDR1_TO "photos//summary//1_tea.xml"
 #define ADDR2_TO "photos//summary//2_west.xml" 
-
- 
+#define ADDR3_TO "photos//summary//3_shop.xml" 
+#define ADDR4_TO "photos//summary//4_story.xml" 
  
  
 long Handle;
@@ -75,7 +76,8 @@ int main(void)
 		printf("start loading photos,please wait for seconds...\n\n");
 		loadPhotos(ADDR1,ADDR1_TO,"tea_bot");	
 		loadPhotos(ADDR2,ADDR2_TO,"west_bot");	
-
+		loadPhotos(ADDR3,ADDR3_TO,"shop");
+		loadPhotos(ADDR4,ADDR4_TO,"story");
 		printf("++++++++++++++++++++++++++++++++++++\n");
 		printf("====================================\n");
 		printf("-->>load all album successfully!\n\n");					
