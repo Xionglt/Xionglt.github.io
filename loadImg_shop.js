@@ -35,15 +35,15 @@ function getPhotos(xmlFile,albumName) {
     //获取照片容器
     var container = document.getElementById('container');
     var teaList = [
-        {title: '隐雕蝶恋龙蛋壶',price: '50.00',url: 'https://detail.1688.com/offer/779036297638.html?spm=a312h.2018_new_sem.dh_002.1.62805bb9eSm0fT  '},
+        {title: '隐雕蝶恋龙蛋壶',price: '¥50.00',url: 'https://detail.1688.com/offer/779036297638.html?spm=a312h.2018_new_sem.dh_002.1.62805bb9eSm0fT  '},
       
-        {title: '隐雕蝶恋圆球西施壶',price: '50.00',url:'https://detail.1688.com/offer/779014334308.html?spm=a312h.2018_new_sem.dh_002.3.62805bb9eSm0fT'},
-        {title: '隐雕蝶恋六方壶',price: '60.00',url:'https://detail.1688.com/offer/779048061142.html?spm=a312h.2018_new_sem.dh_002.7.62805bb9eSm0fT'},
-        {title: '隐雕蝶恋禅韵杯',price: '25.00',url:' https://detail.1688.com/offer/779008094670.html?spm=a2615.2177701.autotrace-offerGeneral.11.1a2a4359epDh9R '},
+        {title: '隐雕蝶恋圆球西施壶',price: '¥50.00',url:'https://detail.1688.com/offer/779014334308.html?spm=a312h.2018_new_sem.dh_002.3.62805bb9eSm0fT'},
+        {title: '隐雕蝶恋六方壶',price: '¥60.00',url:'https://detail.1688.com/offer/779048061142.html?spm=a312h.2018_new_sem.dh_002.7.62805bb9eSm0fT'},
+        {title: '隐雕蝶恋禅韵杯',price: '¥25.00',url:' https://detail.1688.com/offer/779008094670.html?spm=a2615.2177701.autotrace-offerGeneral.11.1a2a4359epDh9R '},
        
-        {title: '青花品茶碗锦上添花怡尚介杯',price: ' 95.00',url:'https://detail.1688.com/offer/778967594686.html?_t=1712563760673&spm=a2615.7691456.co_0_0_wangpu_score_0_0_0_0_0_0_0000_0.0 '},
+        {title: '青花品茶碗锦上添花怡尚介杯',price: '¥95.00',url:'https://detail.1688.com/offer/778967594686.html?_t=1712563760673&spm=a2615.7691456.co_0_0_wangpu_score_0_0_0_0_0_0_0000_0.0 '},
        
-        {title: '功夫茶具套装品',price: '255.99',url:'https://detail.1688.com/offer/778941010955.html?_t=1712563805020&spm=a2615.7691456.co_0_0_wangpu_score_0_0_0_0_0_0_0000_0.0 '},
+        {title: '功夫茶具套装品',price: '¥255.99',url:'https://detail.1688.com/offer/778941010955.html?_t=1712563805020&spm=a2615.7691456.co_0_0_wangpu_score_0_0_0_0_0_0_0000_0.0 '},
        
       
     ];

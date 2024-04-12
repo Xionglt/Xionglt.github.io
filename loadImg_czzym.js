@@ -40,7 +40,7 @@ function getPhotos(xmlFile,albumName) {
         {title: '我在财大画陶瓷！',tx_name: '欢乐马',zan: '❤',url: 'https://www.xiaohongshu.com/explore/661114ff000000001a00ede5'},
         {title: '财大的uu快来 ',tx_name: '猜字谜',zan: '❤',url: ' https://www.xiaohongshu.com/explore/660d6237000000001a011231'},
         {title: '我在财大画陶瓷~',tx_name: '横竖都是蚊子',zan: '❤',url: 'https://www.xiaohongshu.com/explore/660cb851000000001b0091fb'},
-        {title: '中南财新增一批神秘道具',tx_name: '桥边红药_',zan: '❤',url: ' https://www.xiaohongshu.com/explore/660ea110000000001b0103f5'},
+        {title: '在我财玩的实在是太好了',tx_name: '幸运圆',zan: '❤',url: ' https://www.xiaohongshu.com/explore/66154fe4000000001b00d690?app_platform=android&app_version=8.29.0&author_share=1&ignoreEngage=true&share_from_user_hidden=true&type=normal&xhsshare=WeixinSession&shareRedId=ODs1RDZHNj82NzUyOTgwNjY5OTc4OUdC&apptime=1712820497'},
         // {title: 'yyyyyyy',tx_name: 'uh',zan: '❤16k+',url: 'https://baidu.com'},
         // {title: 'vvvvvv',tx_name: '111111hh111',zan: '❤17k+',url: 'https://baidu.com'},
         // {title: 'ccccccccc',tx_name: 'gggg',zan: '❤12k+',url: 'https://baidu.com'},

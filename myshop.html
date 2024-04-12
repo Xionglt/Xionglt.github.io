@@ -29,6 +29,198 @@
   }
 	</style>
     <style>
+          /* Primary Styles */
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   font-size: 1em;
+   color: #333;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+em {
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+} 
+
+/* Layout */
+.s-layout {
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+}
+
+.s-layout__content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 4em;
+   background: #fbfcfc;
+}
+
+.s-sidebar__trigger > i {
+   display: inline-block;
+   margin: 1.5em 0 0 1.5em;
+   color: #f07ab0;
+}
+
+.s-sidebar__nav {
+   position: fixed;
+   top: 0;
+   left: -15em;
+   overflow: hidden;
+   transition: all .3s ease-in;
+   width: 15em;
+   height: 100%;
+   background: #fdfefe;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+   left: 0;
+}
+
+.s-sidebar__nav ul {
+   position: absolute;
+   top: 4em;
+   left: 0;
+   margin: 0;
+   padding: 0;
+   width: 15em;
+}
+
+.s-sidebar__nav ul li {
+   width: 100%;
+}
+
+.s-sidebar__nav-link {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 4em;
+}
+
+.s-sidebar__nav-link em {
+   position: absolute;
+   top: 50%;
+   left: 4em;
+   transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+   background: #fafafb;
+}
+
+.s-sidebar__nav-link > i {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: inline-block;
+   width: 4em;
+   height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+   .s-layout__content {
+      margin-left: 4em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      width: 4em;
+   }
+   
+   .s-sidebar__nav {
+      width: 4em;
+      left: 0;
+   }
+   
+   .s-sidebar__nav:hover,
+   .s-sidebar__nav:focus,
+   .s-sidebar__trigger:hover + .s-sidebar__nav,
+   .s-sidebar__trigger:focus + .s-sidebar__nav {
+      width: 15em;
+   }
+}
+
+@media (min-width: 68em) {
+   .s-layout__content {
+      margin-left: 15em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      display: none
+   }
+   
+   .s-sidebar__nav {
+      width: 15em;
+   }
+   
+   .s-sidebar__nav ul {
+      top: 1.3em;
+   }
+}
+
+       .title{
+            width:200px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            position:relative;
+        }
+
+
+        .title::after, .title::before{
+            position: absolute;
+            width:500px;
+            height:1px;
+            background:#000;
+            content:'';
+            top:25px;
+        }
+
+ 
+
+        .title::after{
+            left:0;
+        }
+
+
+        .title::before{
+            right:0;
+        }
         .head_box{
           width: 100%;
           height: 40px;
@@ -69,7 +261,7 @@
             margin-top: 24px;
           }
           .namebox img{
-            width: 333px;
+            width: 500px;
             height: 500px;
             margin-bottom: 24px;
           }
@@ -110,47 +302,93 @@
 style="background-repeat:no-repeat;
 background-attachment:fixed;
 background-size:100% 100%; ">
- <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top " style="position: absolute;top: 0; background-color: #0e0e0e;"  >
-
-    
-  <div class="container" >
-    <a class="navbar-brand" href="index.html"><img src="./photo/商标.jpg "style="width: 114px; height: auto;"  ></a>
-    
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="container" style="width:810px; height: auto;text-align: center;">
-      <span class="hcqStyle7" style="font-size: 40px; writing-mode: horizontal-tb;text-align: center;">明阳瓷庄</span>  
-    </div>
-  
-    <div class="collapse navbar-collapse" id="navbarResponsive" style="padding: 0%; margin: 0;border: 0ch;">
-    
-      <ul class="navbar-nav ml-auto">
-        
-            <li class="nav-item active">
-          <a class="nav-link active" href="index.html" ><span class="hcqStyle1">首页</span></a>
-          
-        </li>
-      
-        <li class="nav-item">
-          <a class="nav-link" href="myshop.html"><span class="hcqStyle1">明阳瓷器</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="czzym.html"><span class="hcqStyle1">创作故事</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="http://127.0.0.1:7860/?__theme=dark"><span class="hcqStyle1">AI创作</span></a>
-        </li>
-        
-  
-       
-      </ul>
-  
-</nav>
+ <div class="s-layout">
+   <!-- Sidebar -->
+   <div class="s-layout__sidebar" >
+     <a class="s-sidebar__trigger" href="#0">
+        <i class="fa fa-bars"></i>
+     </a>
+   
      
-      <div id="container" class="box"> </div>
+     <nav class="s-sidebar__nav" style="position: absolute;">
+      
+        <ul>
+          <li>
+             <a class="s-sidebar__nav-link" style="margin-bottom: 300px;;color: #f7f6f6;font-family:Borsok Typeface;color:rgb(147, 4, 4);font-size: 30px;"href="#0" >
+                <i class="fa fa-nav" ></i><em></em>
+             </a>
+          </li>
+           <li>
+              <a href="index.html" class="s-sidebar__nav-link" style="color: #000;font-size: 22px;" >
+                 <i class="fa fa-home" ></i><em>所有瓷器种类</em>
+              </a>
+           </li>
+           <li>
+              <a href="tea.html" class="s-sidebar__nav-link"style="color: #000;font-size: 22px;" >
+                <i class="fa fa-user"></i><em>茶具</em>
+              </a>
+           </li>
+           <li>
+              <a  href="west.html" class="s-sidebar__nav-link" style="color: #000;font-size: 22px;">
+             
+                 <i class="fa fa-camera"></i><em>西洋工艺品</em>
+              </a>
+           </li>
+        </ul>
+     </nav>
+   </div>
+   
+   <!-- Content -->
+   <main class="s-layout__content">
+     
+   
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top " style="height: 400px;position: absolute;top: 0; "  >
+ 
+   <div style="height: 200px;">
+     <div class="" style="width: 100%;height: 200px; " >
+       <div class="" style="width: 500px; height: 200px;">
+         <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+         top: 180px;
+         padding: 0;
+         margin: 0;
+         text-align: center;
+         left: 300px;">时代之选 </span>  
+       </div>
+       <div style="width: 500px; height: 200px;">
+         <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+         padding: 0;
+         margin: 0;
+         text-align: center;
+         top: 10px;
+         right: 600px;">
+       <a class="navbar-brand" href="index.html"><img src="./photo/商标.jpg "style="width: 400px; height: 300px;"  ></a>
+      </div>
+       <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button> -->
+     
+     <div class="" style="width: 300px; height: 200px;">
+       <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+       top: 180px;
+       padding: 0;
+       margin: 0;
+       right: 280px;">瓷国明珠 </span>  
+     </div>
+     </div>
+ 
+     <div style="width: 1750px;height: 300px;margin-top: 100px;"class="title";>
+ 
+           <ul  style="top: 0px;text-align: center;">
+               <li style="display: inline;margin-right: 100px;"><span><a href="index.html"style="color:inherit;"class="hcqStyle5">首页</a></span></li>
+               <li style="display: inline;margin-right: 100px;"><span><a href="http://127.0.0.1:7860/?__theme=dark"style="color:inherit;" class="hcqStyle5">AI创作          </a></span> </li>
+               <li  style="display: inline;margin-right: 100px;"><span><a href="czzym.html"style="color:inherit;"class="hcqStyle5">创作故事          </a></span></li>
+             <li style="display: inline;margin-right: 100px;"><span><a href="myshop.html"style="color:inherit;"class="hcqStyle5">明阳瓷器          </a></span></li>
+     
+         </ul>
+     </div>
+   </div>
+   </nav>
+       <div id="container" class="box" style="margin-top:  300px;"> </div>
   
 <script src="/loadImg_shop.js"></script>
 <!-- <div id="landlord">
@@ -194,5 +432,7 @@ getPhotos("./photos/summary/3_shop.xml","shop");
     loadlive2d("live2d", "/live2d/model/tia/model.json");
 </script>
 </footer> -->
+</main>
+</div>
 </body>
 </html>

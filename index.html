@@ -1,186 +1,1398 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?5b55404921f927a3f0feab65375dd8ac";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+
 
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.3, maxmum-scale=1.0, minimum-scale=0.3">
-  <link href="/dist/css/strip.css" rel="stylesheet">
-  <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
- <meta name="keywords" content="明阳瓷庄,">
-<meta content="景德镇国际陶瓷艺术双年展" name="description"/>
-  <meta name="author" content="">
-
-  <title>明阳瓷庄</title>
-
+    <meta charset="UTF-8">
+    <title>创作者故事</title>
+    <link href="/dist/css/strip.css" rel="stylesheet">
+    <link href="2020/css/modern-business.css" rel="stylesheet">
+  
+    
   <!-- Bootstrap core CSS -->
   <link href="2020/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="2020/css/modern-business.css" rel="stylesheet">
+  <!-- <script src="static/js/jquery.min.js"></script> -->
+  <script src="2020/vendor/jquery/jquery.min.js"></script>
+  <script src="2020/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(function () {
+      var index = 0;
+      var timer;
 
-  <style>
-    .head_box{
-      width: 100%;
-      height: 40px;
-      
-      background: fixed;
-      display: flex;
-    }
-    .head_box div{
-      width: 100px;
-      text-align: center;
-      line-height: 40px;
-      font-weight: 600;
-    }
-  </style>
-</head>
+      // 自动切换
+      function f() {
+          var timer = setInterval(function () {
+              $(".box-img").css("opacity", 0);
+              $(".box-img").eq(index).css("opacity", 1);
+              $(".btn").css("background-color", "#4a5460");
+              $(".btn").eq(index).css("background-color", "#ffffff");
+              if ($(".box-img").length - 1 === index) {
+                  index = 0
+              } else {
+                  index++;
+              }
+          }, 4000);
+      }
 
-<body >
+      f();
+      // 左右切换
+      $(".box-left").click(function () {
+          clearInterval(timer);
+          // 点击左，index减1，减到最小时让成为最大
+          if (index === 0) {
+              index = $(".box-img").length - 1;
+          } else {
+              index--;
+          }
+          $(".box-img").css("opacity", 0);
+          $(".box-img").eq(index).css("opacity", 1);
+          $(".btn").css("background-color", "#4a5460");
+          $(".btn").eq(index).css("background-color", "#ffffff");
+          f();
+      });
+      $(".box-right").click(function () {
+          clearInterval(timer);
+          // 点击右，index加1，加到最大时让成为最小
+          if (index === $(".box-img").length - 1) {
+              index = 0;
+          } else {
+              index++;
+          }
+          $(".box-img").css("opacity", 0);
+          $(".box-img").eq(index).css("opacity", 1);
+          $(".btn").css("background-color", "#4a5460");
+          $(".btn").eq(index).css("background-color", "#ffffff");
+          f();
+      });
+      // 点击圆点切换轮播图
+      $(".btn").click(function () {
+          clearInterval(timer);
+          // 获取第几个圆点
+          index = $(this).index()
+          // alert(index)
+          $(".box-img").css("opacity", 0);
+          $(".box-img").eq(index).css("opacity", 1);
+          $(".btn").css("background-color", "#4a5460");
+          $(".btn").eq(index).css("background-color", "#ffffff");
+          f();
+      });
+  })
+</script>
+<script>
+  $(function () {
+      var index = 0;
+      var timer;
 
-  <!-- Navigation -->
-	<!--<div class="bmb" style="position: absolute; right:0; top:4.6rem; background: #fff;"><img src="images/Application-Form-cn.jpg" width="160" height="210" style="border-bottom: solid 1px #ccc" alt=""/></div>-->
-	<style>
-		.news-duiqi{margin-left: 3rem}
-		@media (max-width:800px) {.bmb{display: none}
-			.news-duiqi{margin-left: 0rem}
-    
-  }
-	</style>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top " style="position: absolute;top: 0; background-color: #0e0e0e;"  >
+      // 自动切换
+      function f() {
+          var timer = setInterval(function () {
+              $(".box-img").css("opacity", 0);
+              $(".box-img").eq(index).css("opacity", 1);
+              $(".btn").css("background-color", "#4a5460");
+              $(".btn").eq(index).css("background-color", "#ffffff");
+              if ($(".box-img").length - 1 === index) {
+                  index = 0
+              } else {
+                  index++;
+              }
+          }, 4000);
+      }
 
-    
-    <div class="container" >
-      <a class="navbar-brand" href="index.html"><img src="./photo/商标.jpg "style="width: 114px; height: auto;"  ></a>
-      
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container" style="width: 810px; height: auto;text-align: center;">
-        <span class="hcqStyle7" style="font-size: 40px; writing-mode: horizontal-tb;text-align: center;">明阳瓷庄</span>  
-      </div>
-    
-      <div class="collapse navbar-collapse" id="navbarResponsive" style="padding: 0%; margin: 0;border: 0ch;">
-      
-        <ul class="navbar-nav ml-auto">
+      f();
+      // 左右切换
+      $(".box-left").click(function () {
+          clearInterval(timer);
+          // 点击左，index减1，减到最小时让成为最大
+          if (index === 0) {
+              index = $(".box-img").length - 1;
+          } else {
+              index--;
+          }
+          $(".box-img").css("opacity", 0);
+          $(".box-img").eq(index).css("opacity", 1);
+          $(".btn").css("background-color", "#4a5460");
+          $(".btn").eq(index).css("background-color", "#ffffff");
+          f();
+      });
+      $(".box-right").click(function () {
+          clearInterval(timer);
+          // 点击右，index加1，加到最大时让成为最小
+          if (index === $(".box-img").length - 1) {
+              index = 0;
+          } else {
+              index++;
+          }
+          $(".box-img").css("opacity", 0);
+          $(".box-img").eq(index).css("opacity", 1);
+          $(".btn").css("background-color", "#4a5460");
+          $(".btn").eq(index).css("background-color", "#ffffff");
+          f();
+      });
+      // 点击圆点切换轮播图
+      $(".btn").click(function () {
+          clearInterval(timer);
+          // 获取第几个圆点
+          index = $(this).index()
+          // alert(index)
+          $(".box-img").css("opacity", 0);
+          $(".box-img").eq(index).css("opacity", 1);
+          $(".btn").css("background-color", "#4a5460");
+          $(".btn").eq(index).css("background-color", "#ffffff");
+          f();
+      });
+  })
+</script>
+<script>
+   $(function () {
+       var index = 0;
+       var timer;
+ 
+       // 自动切换
+       function f() {
+           var timer = setInterval(function () {
+               $(".box4-img").css("opacity", 0);
+               $(".box4-img").eq(index).css("opacity", 1);
+               $(".btn4").css("background-color", "#4a5460");
+               $(".btn4").eq(index).css("background-color", "#ffffff");
+               if ($(".box4-img").length - 1 === index) {
+                   index = 0
+               } else {
+                   index++;
+               }
+           }, 4000);
+       }
+ 
+       f();
+       // 左右切换
+       $(".box4-left").click(function () {
+           clearInterval(timer);
+           // 点击左，index减1，减到最小时让成为最大
+           if (index === 0) {
+               index = $(".box4-img").length - 1;
+           } else {
+               index--;
+           }
+           $(".box4-img").css("opacity", 0);
+           $(".box4-img").eq(index).css("opacity", 1);
+           $(".btn4").css("background-color", "#4a5460");
+           $(".btn4").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+       $(".box4-right").click(function () {
+           clearInterval(timer);
+           // 点击右，index加1，加到最大时让成为最小
+           if (index === $(".box4-img").length - 1) {
+               index = 0;
+           } else {
+               index++;
+           }
+           $(".box4-img").css("opacity", 0);
+           $(".box4-img").eq(index).css("opacity", 1);
+           $(".btn4").css("background-color", "#4a5460");
+           $(".btn4").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+       // 点击圆点切换轮播图
+       $(".btn4").click(function () {
+           clearInterval(timer);
+           // 获取第几个圆点
+           index = $(this).index()
+           // alert(index)
+           $(".box4-img").css("opacity", 0);
+           $(".box4-img").eq(index).css("opacity", 1);
+           $(".btn4").css("background-color", "#4a5460");
+           $(".btn4").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+   })
+ </script>
+<script>
+   $(function () {
+       var index = 0;
+       var timer;
+ 
+       // 自动切换
+       function f() {
+           var timer = setInterval(function () {
+               $(".box2-img").css("opacity", 0);
+               $(".box2-img").eq(index).css("opacity", 1);
+               $(".btn2").css("background-color", "#4a5460");
+               $(".btn2").eq(index).css("background-color", "#ffffff");
+               if ($(".box2-img").length - 1 === index) {
+                   index = 0
+               } else {
+                   index++;
+               }
+           }, 4000);
+       }
+ 
+       f();
+       // 左右切换
+       $(".box2-left").click(function () {
+           clearInterval(timer);
+           // 点击左，index减1，减到最小时让成为最大
+           if (index === 0) {
+               index = $(".box2-img").length - 1;
+           } else {
+               index--;
+           }
+           $(".box2-img").css("opacity", 0);
+           $(".box2-img").eq(index).css("opacity", 1);
+           $(".btn2").css("background-color", "#4a5460");
+           $(".btn2").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+       $(".box2-right").click(function () {
+           clearInterval(timer);
+           // 点击右，index加1，加到最大时让成为最小
+           if (index === $(".box2-img").length - 1) {
+               index = 0;
+           } else {
+               index++;
+           }
+           $(".box2-img").css("opacity", 0);
+           $(".box2-img").eq(index).css("opacity", 1);
+           $(".btn2").css("background-color", "#4a5460");
+           $(".btn2").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+       // 点击圆点切换轮播图
+       $(".btn2").click(function () {
+           clearInterval(timer);
+           // 获取第几个圆点
+           index = $(this).index()
+           // alert(index)
+           $(".box2-img").css("opacity", 0);
+           $(".box2-img").eq(index).css("opacity", 1);
+           $(".btn2").css("background-color", "#4a5460");
+           $(".btn2").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+   })
+ </script>
+ <script>
+   $(function () {
+       var index = 0;
+       var timer;
+ 
+       // 自动切换
+       function f() {
+           var timer = setInterval(function () {
+               $(".box3-img").css("opacity", 0);
+               $(".box3-img").eq(index).css("opacity", 1);
+               $(".btn3").css("background-color", "#4a5460");
+               $(".btn3").eq(index).css("background-color", "#ffffff");
+               if ($(".box3-img").length - 1 === index) {
+                   index = 0
+               } else {
+                   index++;
+               }
+           }, 4000);
+       }
+ 
+       f();
+       // 左右切换
+       $(".box3-left").click(function () {
+           clearInterval(timer);
+           // 点击左，index减1，减到最小时让成为最大
+           if (index === 0) {
+               index = $(".box3-img").length - 1;
+           } else {
+               index--;
+           }
+           $(".box3-img").css("opacity", 0);
+           $(".box3-img").eq(index).css("opacity", 1);
+           $(".btn3").css("background-color", "#4a5460");
+           $(".btn3").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+       $(".box3-right").click(function () {
+           clearInterval(timer);
+           // 点击右，index加1，加到最大时让成为最小
+           if (index === $(".box3-img").length - 1) {
+               index = 0;
+           } else {
+               index++;
+           }
+           $(".box3-img").css("opacity", 0);
+           $(".box3-img").eq(index).css("opacity", 1);
+           $(".btn3").css("background-color", "#4a5460");
+           $(".btn3").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+       // 点击圆点切换轮播图
+       $(".btn3").click(function () {
+           clearInterval(timer);
+           // 获取第几个圆点
+           index = $(this).index()
+           // alert(index)
+           $(".box3-img").css("opacity", 0);
+           $(".box3-img").eq(index).css("opacity", 1);
+           $(".btn3").css("background-color", "#4a5460");
+           $(".btn3").eq(index).css("background-color", "#ffffff");
+           f();
+       });
+   })
+ </script>
+    <style>
+ .box {
+            height: 800px;
+            width: 1600px;
+            position: relative;
+        }
+
+        .box-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .box-img:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box-img img {
+            height: 800px;
+            width: 1600px;
+        }
+
+        /*左右切换*/
+        .box-left {
+            position: absolute;
+            left: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box-left:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        .box-right {
+            position: absolute;
+            right: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box-right:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        /*圆点*/
+        .box-dot {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+        }
+
+        .box-dot ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box-dot ul li {
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #4a5460;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box-dot ul li:hover, .box-dot ul li:nth-child(1) {
+            background-color: #ffffff;
+        }
+
+        .box2 {
+            height: 800px;
+            width: 1600px;
+            position: relative;
+        }
+
+        .box2-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .box2-img:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box2-img img {
+            height: 800px;
+            width: 1600px;
+        }
+
+        /*左右切换*/
+        .box2-left {
+            position: absolute;
+            left: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box2-left:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        .box2-right {
+            position: absolute;
+            right: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box2-right:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        /*圆点*/
+        .box2-dot {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+        }
+
+        .box2-dot ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box2-dot ul li {
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #4a5460;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box2-dot ul li:hover, .box-dot ul li:nth-child(1) {
+            background-color: #ffffff;
+        }
+        .box2 {
+            height: 800px;
+            width: 1600px;
+            position: relative;
+        }
+
+        .box2-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .box2-img:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box2-img img {
+            height: 800px;
+            width: 1600px;
+        }
+
+        /*左右切换*/
+        .box2-left {
+            position: absolute;
+            left: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box2-left:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        .box2-right {
+            position: absolute;
+            right: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box2-right:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        /*圆点*/
+        .box2-dot {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+        }
+
+        .box2-dot ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box2-dot ul li {
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #4a5460;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box2-dot ul li:hover, .box-dot ul li:nth-child(1) {
+            background-color: #ffffff;
+        }
+
+        .box4 {
+            height: 800px;
+            width: 1600px;
+            position: relative;
+        }
+
+        .box4-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .box4-img:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box4-img img {
+            height: 800px;
+            width: 1600px;
+        }
+
+        /*左右切换*/
+        .box4-left {
+            position: absolute;
+            left: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box4-left:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        .box4-right {
+            position: absolute;
+            right: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box4-right:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        /*圆点*/
+        .box4-dot {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+        }
+
+        .box4-dot ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box4-dot ul li {
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #4a5460;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box4-dot ul li:hover, .box-dot ul li:nth-child(1) {
+            background-color: #ffffff;
+        }
+        .box4 {
+            height: 800px;
+            width: 1600px;
+            position: relative;
+        }
+
+        .box4-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .box4-img:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box4-img img {
+            height: 800px;
+            width: 1600px;
+        }
+
+        /*左右切换*/
+        .box4-left {
+            position: absolute;
+            left: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box4-left:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        .box4-right {
+            position: absolute;
+            right: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box4-right:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        /*圆点*/
+        .box4-dot {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+        }
+
+        .box4-dot ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box4-dot ul li {
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #4a5460;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box4-dot ul li:hover, .box-dot ul li:nth-child(1) {
+            background-color: #ffffff;
+        }
+
+        .box3 {
+            height: 800px;
+            width: 1600px;
+            position: relative;
+        }
+
+        .box3-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .box3-img:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box3-img img {
+            height: 800px;
+            width: 1600px;
+        }
+
+        /*左右切换*/
+        .box3-left {
+            position: absolute;
+            left: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box3-left:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        .box3-right {
+            position: absolute;
+            right: 0;
+            top: 195px;
+            width: 35px;
+            height: 70px;
+            border-radius: 5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            color: #b0afad;
+        }
+
+        .box3-right:hover {
+            background-color: #777777;
+            color: #ffffff;
+        }
+
+        /*圆点*/
+        .box3-dot {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+        }
+
+        .box3-dot ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box3-dot ul li {
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #4a5460;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box3-dot ul li:hover, .box-dot ul li:nth-child(1) {
+            background-color: #ffffff;
+        }
+
+
+
+
+      .container1 {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
           
-              <li class="nav-item active">
-            <a class="nav-link active" href="index.html" ><span class="hcqStyle1">首页</span></a>
+          
+          
+          
+        }
+        .one {
+          width: 250px;
+          height: 40px;
+          background-color: #ccc;
+          margin: 5px;
+
+        }
+      /* Primary Styles */
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   font-size: 1em;
+   color: #333;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+em {
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+} 
+
+/* Layout */
+.s-layout {
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+}
+
+.s-layout__content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 4em;
+   background: #fbfcfc;
+}
+
+.s-sidebar__trigger > i {
+   display: inline-block;
+   margin: 1.5em 0 0 1.5em;
+   color: #f07ab0;
+}
+
+.s-sidebar__nav {
+   position: fixed;
+   top: 0;
+   left: -15em;
+   overflow: hidden;
+   transition: all .3s ease-in;
+   width: 15em;
+   height: 100%;
+   background: #fdfefe;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+   left: 0;
+}
+
+.s-sidebar__nav ul {
+   position: absolute;
+   top: 4em;
+   left: 0;
+   margin: 0;
+   padding: 0;
+   width: 15em;
+}
+
+.s-sidebar__nav ul li {
+   width: 100%;
+}
+
+.s-sidebar__nav-link {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 4em;
+}
+
+.s-sidebar__nav-link em {
+   position: absolute;
+   top: 50%;
+   left: 4em;
+   transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+   background: #fafafb;
+}
+
+.s-sidebar__nav-link > i {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: inline-block;
+   width: 4em;
+   height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+   .s-layout__content {
+      margin-left: 4em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      width: 4em;
+   }
+   
+   .s-sidebar__nav {
+      width: 4em;
+      left: 0;
+   }
+   
+   .s-sidebar__nav:hover,
+   .s-sidebar__nav:focus,
+   .s-sidebar__trigger:hover + .s-sidebar__nav,
+   .s-sidebar__trigger:focus + .s-sidebar__nav {
+      width: 15em;
+   }
+}
+
+@media (min-width: 68em) {
+   .s-layout__content {
+      margin-left: 15em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      display: none
+   }
+   
+   .s-sidebar__nav {
+      width: 15em;
+   }
+   
+   .s-sidebar__nav ul {
+      top: 1.3em;
+   }
+}
+
+       .title{
+            width:200px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            position:relative;
+        }
+
+
+        .title::after, .title::before{
+            position: absolute;
+            width:500px;
+            height:1px;
+            background:#000;
+            content:'';
+            top:25px;
+        }
+
+ 
+
+        .title::after{
+            left:0;
+        }
+
+
+        .title::before{
+            right:0;
+        }
+           .head_box{
+          width: 100%;
+          height: 40px;
+          background-color: #fff;
+          display: flex;
+        }
+        .head_box div{
+          width: 100px;
+          text-align: center;
+          line-height: 40px;
+          font-weight: 600;
+        }
+        .box {
+              margin: 10px;
+              column-count: 3;
+              column-gap: 10px;
+          }
+          .item {
+              margin-bottom: 10px;
+          }
+          .item img{
+              width: 100%;
+              height:100%;
+          }
+          #container{
+             display: flex;
+             justify-content: space-between;
+             flex-wrap: wrap;
+             width: 100%;
+             padding: 100px;
+             box-sizing: border-box;
+             position: relative;
+          }
+          .namebox{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+            margin-top: 24px;
+          }
+          .namebox .imgs{
+            width: 333px;
+            height: 500px;
+            margin-bottom: 12px;
+          }
+          p{
+            /* font-weight: 600;
+            color: #333333; */
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+          }
+          .namebox .img_tx{
+            width: 30px!important;
+            height: 30px!important;
+            border-radius: 50%;
+            position: relative;
+          }
+          .txbox{
+            display: flex;
+            /* width: 100px; */
+            /* justify-content: space-between; */
+            align-items: center;
+            margin-top: 12px;
+            position: relative;
+          }
+          .tx_span{
+            font-size: 14px;
+            color: #999999;
+            margin-left: 24px;
             
-          </li>
-        
-          <li class="nav-item">
-            <a class="nav-link" href="myshop.html"><span class="hcqStyle1">明阳瓷器</span></a>
-          </li>
+          }
+      </style>
+     <script src="2020/vendor/jquery/jquery.min.js"></script>
+     <script src="2020/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="./Live2D-master/live2d/css/live2d.css" /> -->
+    <!-- <style>
+        html,body,div,ul,li {
+            padding: 0;
+            margin: 0;
+        }
+        .contaner {
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            align-items: center; /*item内容垂直居中*/
+        }
+        .item {
+            font-size: 40px;
+            width: calc((100% - 40px)/3);
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .item:nth-child(3n - 1) {
+            padding:0 20px;
+        }
+    </style> -->
+</head>
+<body 
+ 
+style="background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%; ">
 
-          <li class="nav-item">
-            <a class="nav-link" href="czzym.html"><span class="hcqStyle1">创作故事</span></a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:7860/?__theme=dark"><span class="hcqStyle1">AI创作</span></a>
-          </li>
-          
-		
-         
-        </ul>
     
+  
+ <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top " style="height: 400px;position: absolute;top: 0; "  >
+
+  <div style="height: 200px;">
+    <div class="" style="width: 100%;height: 200px; " >
+      <div class="" style="width: 500px; height: 200px;">
+        <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+        top: 180px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        left: 300px;">时代之选 </span>  
+      </div>
+      <div style="width: 500px; height: 200px;">
+        <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        top: 10px;
+        right: 600px;">
+      <a class="navbar-brand" href="index.html"><img src="./photo/商标.jpg "style="width: 400px; height: 300px;"  ></a>
+     </div>
+      <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    
+    <div class="" style="width: 300px; height: 200px;">
+      <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+      top: 180px;
+      padding: 0;
+      margin: 0;
+      right: 280px;">瓷国明珠 </span>  
+    </div>
+    </div>
+
+    <div style="width: 1750px;height: 300px;margin-top: 100px;"class="title";>
+
+          <ul  style="top: 0px;text-align: center;">
+              <li style="display: inline;margin-right: 100px;"><span><a href="index.html"style="color:inherit;"class="hcqStyle5">首页</a></span></li>
+              <li style="display: inline;margin-right: 100px;"><span><a href="http://127.0.0.1:7860/?__theme=dark"style="color:inherit;" class="hcqStyle5">AI创作          </a></span> </li>
+              <li  style="display: inline;margin-right: 100px;"><span><a href="czzym.html"style="color:inherit;"class="hcqStyle5">创作故事          </a></span></li>
+            <li style="display: inline;margin-right: 100px;"><span><a href="myshop.html"style="color:inherit;"class="hcqStyle5">明阳瓷器          </a></span></li>
+    
+        </ul>
+    </div>
+  </div>
   </nav>
 
-  <header>
-    <div  class="JICB-banner" > 
-		<!--<a href="Download.html" target="_blank"><img src="images/index.jpg"  alt="" width="100%" class=""/></a>
-		<img src="images/index0922.jpg"  alt="" width="100%" class=""/>-->
-		<a href="./photo/瓷器文化5.jpg" target="_blank"><img src="./photo/瓷器文化5.jpg"   style="position: absolute;top: 110px;"   alt=""  height="840px" width="100%" class=""/></a>
-	  </div>
-  </header>
+ 
+    <div class="" style="margin-top: 550px ;background-size: cover;text-align: center; height: 500px;width: 100%;">
+      <div class="box">
+         <!-- 轮播图 -->
+         <div class="box-img"><img src="./photos/index/1.png"></div>
+         <div class="box-img"><img src="./photos/index/2.png"></div>
+         <div class="box-img"><img src="./photos/index/3.png"></div>
+         
+         <!-- 左右切换 -->
+         <div class="box-left">&lt;</div>
+         <div class="box-right">&gt;</div>
+         <!-- 圆点 -->
+         <div class="box-dot">
+             <ul>
+                 <li class="btn"></li>
+                 <li class="btn"></li>
+                 <li class="btn"></li>
+                 
+             </ul>
+         </div>
+     </div>
 
-  <!-- Page Content -->
-  <div class="container" style="position: absolute;top: 940px;">
-   
- <!-- Portfolio Section -->
-	  <h1 class="jicb-h1" style="margin-top: 5rem !important"><strong>东方茶具</strong> <span>| Oriental tea set</span></h1><a href="../tea.html" style="float: right; margin-top: -28px;color:#7c7c7c;">更多</a>
-<hr class="blue-index">
-	  <div class="row"><div class="col-lg-2 col-sm-6 portfolio-item"></div>
-		  		  <div class="col-lg-3 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="./photo/10.jpg"><img class="card-img-top" src="./photo/10.jpg" alt=""></a>
-          <div class="card-body">
-		    <p class="card-text">热烈似火</p>
-            <h5 class="card-title">
-              <a href="./photo/10.jpg">红色调为主题的喜庆套
-</a>
-            </h5>          
-          </div>
-        </div>
-      </div>
-		     <div class="col-lg-3 col-sm-6 portfolio-item  news-duiqi">
-        <div class="card h-100">
-          <a href="./photo/4.jpg"><img class="card-img-top" src="./photo/4.jpg" alt=""></a>
-          <div class="card-body">
-		    <p class="card-text">闲情雅致</p>
-            <h5 class="card-title">
-     
-				 <a href="./photo/4.jpg">黄色调为主题的休闲套
-</a>
-            </h5>          
-          </div>
-        </div>
-      </div>	
-		  	    	  <div class="col-lg-3 col-sm-6 portfolio-item news-duiqi">
-        <div class="card h-100">
-          <a href="./photo/7.jpg"><img class="card-img-top" src="./photo/7.jpg" alt=""></a>
-          <div class="card-body">
-			  <p class="card-text">明媚如风</p>
-            <h5 class="card-title">
-             <a href="./photo/7.jpg">带有森林气息的养生套
-</a>
-            </h5>          
-          </div>
-        </div>
-      </div> 
-    </div>
+
+      <!-- <div class="slider">
+         <img src="./photos/index/1.png" alt="">
+         <img src="./photos/index/2.png" alt="">
+         <img src="./photos/index/3.png" alt="">
+     </div> -->
+ 
+    <h1 class="hcqStyle7" style="font-family:cursive;;text-align: center;font-size: 50px;">
+      <br />
+      明阳瓷庄
+    </h1>
+
+    <h2 style="text-align: center;">
+      <br />
       
-      <!-- Portfolio Section -->
-    <h1 class="jicb-h1"><strong>西洋茶具</strong> <span>| Western tea set</span></h1><a href="../west.html" style="float: right; margin-top: -28px;color:#7c7c7c;">更多</a>
-<hr class="blue-index">
-	  <div class="row"><div class="col-lg-2 col-sm-6 portfolio-item"></div>
-		 <div class="col-lg-5 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="./photo/106.jpg"><img class="card-img-top" src="./photo/106.jpg" alt=""></a>
-          <div class="card-body">
-			  <p class="card-text">卡通系列</p>
-            <h5 class="card-title">
-              <a href="./photo/106.jpg">以动物图案为主题，增添趣味
-</a>
-            </h5>          
-          </div>
-        </div>
-      </div> 
-		  <div class="col-lg-5 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="./photo/105 .jpg"><img class="card-img-top" src="./photo/105 .jpg" alt=""></a>
-          <div class="card-body">
-			  <p class="card-text">青花系列</p>
-            <h5 class="card-title">
-             <a href="./photo/105 .jpg">瓷器上刻花，复古风
-</a>
-            </h5>          
-          </div>
-        </div>
-      </div> 
-		  	 
-		  	
+      明阳瓷庄以“新国瓷的创新创意创造”为愿景，坚持做好一件事，那就是做好中国白，<br />
+      将中国白做到世界一流水平。主动发挥优势，积极融入世界新格局，展现新作为，<br />
+      立志成为中国递给世界的一张文化名片 ，让世界共享中国白。
+
+    </h2>
     </div>
-    
-    <script src="/JQ/js/jquery-1.11.0.min.js"></script>
-    <script src="/JQ/dist/js/strip.pkgd.min.js"></script> 
-<!-- Portfolio Section -->
+  
+    <div class="" style="margin-top: 680px ;background-size: cover;text-align: center; height: 500px;width: 100%;">
+      <div class="box4">
+         <!-- 轮播图 -->
+         <div class="box4-img"><img src="./photos/index/4.png"></div>
+         <div class="box4-img"><img src="./photos/index/5.png"></div>
+         <div class="box4-img"><img src="./photos/index/6.png"></div>
+      
+         <!-- 左右切换 -->
+         <div class="box4-left">&lt;</div>
+         <div class="box4-right">&gt;</div>
+         <!-- 圆点 -->
+         <div class="box4-dot">
+             <ul>
+                 <li class="btn4"></li>
+                 <li class="btn4"></li>
+                 <li class="btn4"></li>
+                 
+             </ul>
+         </div>
+     </div>
+
+
+      <!-- <div class="slider">
+         <img src="./photos/index/1.png" alt="">
+         <img src="./photos/index/2.png" alt="">
+         <img src="./photos/index/3.png" alt="">
+     </div> -->
+ 
+     <h1 class="hcqStyle7" style="font-family:cursive;;text-align: center;font-size: 50px;">
+      <br />
+      Ai创作
+    </h1>
+
+    <h2 style="text-align: center;">
+      <br />
+      明阳瓷庄跟随时代潮流，开发mychina 模型，做专注于瓷器设计的高性能设计软件，赋能瓷器行业的创新创意创造。<br />
+      推动“中国瓷”科技化转型。相较于普通绘画模型，<br />
+      mychina具有色泽好、造型真、质感柔、出图快等优势，释放无限的想象力！
+
+    </h2>
+    </div>
+    <div class="" style="margin-top: 680px ;background-size: cover;text-align: center; height: 500px;width: 100%;">
+      <div class="box2">
+         <!-- 轮播图 -->
+         <div class="box2-img"><img src="./photos/index/7.png"></div>
+         <div class="box2-img"><img src="./photos/index/8.png"></div>
+         <div class="box2-img"><img src="./photos/index/9.png"></div>
+      
+         <!-- 左右切换 -->
+         <div class="box2-left">&lt;</div>
+         <div class="box2-right">&gt;</div>
+         <!-- 圆点 -->
+         <div class="box2-dot">
+             <ul>
+                 <li class="btn2"></li>
+                 <li class="btn2"></li>
+                 <li class="btn2"></li>
+                 
+             </ul>
+         </div>
+     </div>
+
+
+      <!-- <div class="slider">
+         <img src="./photos/index/1.png" alt="">
+         <img src="./photos/index/2.png" alt="">
+         <img src="./photos/index/3.png" alt="">
+     </div> -->
+ 
+     <h1 class="hcqStyle7" style="font-family:cursive;;text-align: center;font-size: 50px;">
+      <br />
+      创作者故事
+    </h1>
+
+    <h2 style="text-align: center;">
+      <br />
+      明阳瓷庄秉持着“人人都是艺术家”的理念，开发中国白瓷器创作平台，<br />
+      给予每位有想法的创作者自主创作瓷器的机会，并收集创作者故事，<br />
+      打造文化矩阵，挖掘每个人的艺术创造力，做“从市场端分析市场”的产品。
+
+    </h2>
+    </div>
+    <div class="" style="margin-top: 680px ;background-size: cover;text-align: center; height: 500px;width: 100%;">
+      <div class="box3">
+         <!-- 轮播图 -->
+         <div class="box3-img"><img src="./photos/index/10.png"></div>
+         <div class="box3-img"><img src="./photos/index/11.png"></div>
+         <div class="box3-img"><img src="./photos/index/12.png"></div>
+         <div class="box3-img"><img src="./photos/index/13.png"></div>
+         <div class="box3-img"><img src="./photos/index/14.png"></div>
+         <div class="box3-img"><img src="./photos/index/15.png"></div>
+         <!-- 左右切换 -->
+         <div class="box3-left">&lt;</div>
+         <div class="box3-right">&gt;</div>
+         <!-- 圆点 -->
+         <div class="box3-dot">
+             <ul>
+                 <li class="btn3"></li>
+                 <li class="btn3"></li>
+                 <li class="btn3"></li>
+                 <li class="btn3"></li>
+                 <li class="btn3"></li>
+                 <li class="btn3"></li>
+             </ul>
+         </div>
+     </div>
+
+
+      <!-- <div class="slider">
+         <img src="./photos/index/1.png" alt="">
+         <img src="./photos/index/2.png" alt="">
+         <img src="./photos/index/3.png" alt="">
+     </div> -->
+ 
+     <h1 class="hcqStyle7" style="font-family:cursive;;text-align: center;font-size: 50px;">
+      <br />
+      东方茶器
+    </h1>
+
+    <h2 style="text-align: center;">
+      <br />
+      根植于深厚的陶瓷文化底蕴，明阳瓷庄茶具也被赋予了德化的气质，温润明净、清新脱俗又不失工艺神韵，<br />
+      功能造型各异，形状花面规格繁多，就连原各陶瓷产区的官、哥、汝、定、钧五大名窑，以及建盏类陶瓷，<br />
+      在明阳瓷庄应有尽有，走进千家万户改变了许多人喝茶的习惯，成为无数茶桌上的宠儿。
+
+    </h2>
+    </div>
+   
+
+
+
+</body>
+</html>
